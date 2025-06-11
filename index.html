@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+    <!-- Fonte do Google - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Renata Negrini, desenvolvedora web fullstack. Confira meus projetos e habilidades.">
     <meta author="Renata Negrini">
     <meta name="keywords" content="Renata Negrini, portfólio, desenvolvedor web, desenvolvedora web, fullstack, projetos, habilidades, Java, HTML, CSS, JavaScript, PostgreSQL, MySQL, Git, GitHub, Docker, Agile, Scrum, Kanban, RESTful APIs, Material UI, Figma">
     <link rel="icon" href="./assets/img/favicon.svg" />
+    
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
     <title>Portfólio - Renata Negrini</title>
 </head>
 <body>
     <!-- cabeçalho da página -->
-    <header>
-        <div id="header_content">
+    <header class="flex menu_container">
+        <div id="header_content" class="menu_content">
             <!-- Título do cabeçalho -->
             <div id="titulo">
                 <a href="#">Universo</a>
             </div>
 
             <!-- Menu -->
-             <div id="menu">
+             <div class="flex" id="menu">
 
                 <!-- Barra de navegação -->
                 <nav>
-                    <ul>
+                    <ul class="flex menu_list">
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#contact">Contato</a></li>
@@ -36,28 +46,30 @@
     <!-- Seção principal da página -->
     <main>
         <!-- Seção Home -->
-        <section id="home">
-            <article id="home_texto">
+        <section id="home" class="flex home_container">
+            <article id="home_texto" class="flex home_content">
                 <h4>Bem-vindo ao novo universo!</h1>
                 <h1>Mundos diferentes para pessoas diferentes</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci odio possimus nihil, cumque fuga nostrum voluptatem veniam dolore. Asperiores odio quidem ipsam consequuntur voluptatem explicabo dolorem et facilis aspernatur?</p>
-                <a href="https://github.com/renatangr" target="_blank">GitHub</a>
+                <a href="https://github.com/renatangr" target="_blank" class="botao">GitHub</a>
             </article>
 
-            <article id="home_imagem">
+            <article id="home_imagem" class="flex home_content">
                 <img src="./assets/img/astronauta.svg" alt="Capacete animado de astronauta">
             </article>
         </section>
         
         <!-- Seção Sobre -->
-        <section id="about">
+        <section id="about" class="flex sobre_container">
+            <article id="about_img" class="flex sobre_content">
             <img src="./assets/img/user_02.svg" alt="Foto do perfil do GitHub">
-            <article id="about_texto">
+            </article>
+            <article id="about_texto" class="flex sobre_content">
                 <h1>Sobre mim</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci odio possimus nihil, cumque fuga nostrum voluptatem veniam dolore. Asperiores odio quidem ipsam consequuntur voluptatem explicabo dolorem et facilis aspernatur?</p>
 
-                <div id="about_github">
-                    <a href="https://github.com/renatangr" target="_blank">GitHub</a>
+                <div id="about_github" class="flex sobre_github">
+                    <a href="https://github.com/renatangr" target="_blank" class="botao">GitHub</a>
                     <p>200 seguidores</p>
                     <p>20 repositórios</p>
                     
@@ -119,13 +131,13 @@
                     placeholder="Digite sua mensagem">
                 </textarea>
 
-                <button type="submit">Enviar</button>
+                <button class="botao" type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
     <!-- Rodapé da página -->
-    <footer>
+    <footer class="flex footer_container">
         Feito com 💗 por Renata Negrini | 2025
     </footer>
 
