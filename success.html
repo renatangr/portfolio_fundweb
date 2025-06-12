@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonte do Google - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Obrigada por entrar em contato!">
-    <meta author="Renata Negrini">
-    <meta name="keywords" content="Renata Negrini, portfólio, desenvolvedor web, desenvolvedora web, fullstack, projetos, habilidades, Java, HTML, CSS, JavaScript, PostgreSQL, MySQL, Git, GitHub, Docker, Agile, Scrum, Kanban, RESTful APIs, Material UI, Figma">
+    <meta name="description" content="Projeto Portfólio do Rafael, desenvolvedor web fullstack.">
+    <meta name="author" content="Rafael Queiróz">
+    <meta name="keywords" content="portfólio, desenvolvedor, web, fullstack, Rafael Queiróz, HTML, CSS, JavaScript">
     <link rel="icon" href="./assets/img/favicon.svg" />
+
+      <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
     <title>Portfólio - Renata Negrini</title>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div id="header_content">
-            <div id="titulo">
-                <a href="#">Universo</a>
+   <!-- Cabeçalho da Página (header) -->
+    <header class="flex menu_container">
+
+        <!-- Div Conteudo do Cabeçalho -->
+        <div id="header_content" class="menu_content">
+
+             <!-- Conteúdo do Cabeçalho -->
+             <div id="menu_content_sucess">
+
+                <!-- Hyperlink -->
+                <a href="index.html">Universo</a>
+
             </div>
+
         </div>
     </header>
 
-    <!-- Conteúdo da mensagem de sucesso -->
+    <!-- Seção Principal da Página (main) -->
     <main>
-        <div id="conteudo">
-            <div id="mensagem_sucesso">
+
+        <!-- Seção Home -->
+        <section id="home" class="flex home_container_sucess">
+
+            <!-- Texto da Seção Home -->
+            <article id="home_sucess" class="flex">
+
                 <h1>E-mail enviado com Sucesso!</h1>
-                <p>Obrigada por entrar em contato, logo mais retornarei sua mensagem.</p>
-                <button id="botao_voltar">
-                    Voltar
-                </button>
-            </div>
-        </div>
+                <h4>Obrigado por entrar em contato, logo mais retornarei sua mensagem!</h4>
+
+                <a class="botao" href="index.html">Voltar</a>
+
+            </article>
+
+        </section>
+
     </main>
 
     <!-- Rodapé -->
-    <footer>Feito com 💗 por Renata Negrini | 2025</footer>
+    <footer>
+        Feito com 💗 por Renata Negrini | 2025
+    </footer>
 </body>
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <!-- Servidores de Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  
     <!-- Fonte do Google - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +24,7 @@
 <body>
     <!-- cabeçalho da página -->
     <header class="flex menu_container">
+
         <div id="header_content" class="menu_content">
             <!-- Título do cabeçalho -->
             <div id="titulo">
@@ -47,13 +50,16 @@
     <main>
         <!-- Seção Home -->
         <section id="home" class="flex home_container">
+
+             <!-- Texto da seção Home -->
             <article id="home_texto" class="flex home_content">
-                <h4>Bem-vindo ao novo universo!</h1>
-                <h1>Mundos diferentes para pessoas diferentes</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci odio possimus nihil, cumque fuga nostrum voluptatem veniam dolore. Asperiores odio quidem ipsam consequuntur voluptatem explicabo dolorem et facilis aspernatur?</p>
-                <a href="https://github.com/renatangr" target="_blank" class="botao">GitHub</a>
+                <h4>console.log("olá!")</h4>
+                <h1>Renata Negrini Desenvolvedora FullStack</h1>
+                <p>Com uma base sólida em lógica de programação e orientação a objetos com Java, venho construindo minha jornada rumo ao full-stack, unindo teoria e prática em projetos reais. </p>
+                <a href="https://github.com/renatangr" target="_blank" class="botao">Explore meu GitHub</a>
             </article>
 
+            <!-- Imagem da seção  Home -->
             <article id="home_imagem" class="flex home_content">
                 <img src="./assets/img/astronauta.svg" alt="Capacete animado de astronauta">
             </article>
@@ -61,26 +67,14 @@
         
         <!-- Seção Sobre -->
         <section id="about" class="flex sobre_container">
-            <article id="about_img" class="flex sobre_content">
-            <img src="./assets/img/user_02.svg" alt="Foto do perfil do GitHub">
-            </article>
-            <article id="about_texto" class="flex sobre_content">
-                <h1>Sobre mim</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci odio possimus nihil, cumque fuga nostrum voluptatem veniam dolore. Asperiores odio quidem ipsam consequuntur voluptatem explicabo dolorem et facilis aspernatur?</p>
-
-                <div id="about_github" class="flex sobre_github">
-                    <a href="https://github.com/renatangr" target="_blank" class="botao">GitHub</a>
-                    <p>200 seguidores</p>
-                    <p>20 repositórios</p>
-                    
-                </div>
-            </article>
+            
         </section>
         
         <!-- Seção Contato -->
         <section id="contact" class="contato_container">
-            <article id="redes_sociais" class="contato_content"></article>
-            <h4>Contate-me</h4>
+
+            <article id="redes_sociais" class="contato_content">
+            <h4>Acesse minhas redes sociais</h4>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis soluta quas consequuntur. Quisquam iste quod maiores rem, pariatur, consectetur, sequi maxime eos repellendus consequuntur dignissimos iure saepe voluptates mollitia optio.</p>
         
             <div id="icones_redes_sociais" class="social_container">
@@ -99,37 +93,29 @@
 
                 </a>
             </div>
+        </article>
 
-            <form action="" method="post">
+            <!-- Formulário de Contato -->
+             <form action="https://formsubmit.co/5596395100d0f40b7b65e753a7fb3bce" method="POST" id="formulario">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/success.html">
+                <input type="hidden" name="_captcha" value="false">
+
                 <label for="nome">Nome</label>
-                <input 
-                    id="nome"
-                    name="nome"
-                    type="text"
-                    placeholder="Digite o seu nome. Ex.: Maria da Silva">
+                <input id="nome" name="nome" type="text" placeholder="Digite o seu nome">
                 <span id="txtNome"></span>
 
                 <label for="email">E-mail</label>
-                <input 
-                    id="email"
-                    name="email"
-                    type="text"
-                    placeholder="Digite o seu e-mail principal. Ex.: mariasilva@hotmail.com">
+                <input id="email" name="email" type="text" placeholder="Digite um endereço de e-mail válido">
                 <span id="txtEmail"></span>
-            
+
                 <label for="assunto">Assunto</label>
-                <input 
-                    id="assunto"
-                    name="assunto"
-                    type="text"
-                    placeholder="Digite o assunto do seu contato.">
+                <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto">
                 <span id="txtAssunto"></span>
-            
+
                 <label for="mensagem">Mensagem</label>
-                <textarea 
-                    name="mensagem" 
-                    id="mensagem"
-                    placeholder="Digite sua mensagem">
+
+                <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem">
                 </textarea>
 
                 <button class="botao" type="submit">Enviar</button>
@@ -138,8 +124,13 @@
     </main>
 
     <!-- Rodapé da página -->
-    <footer class="flex footer_container">
+    <footer>
         Feito com 💗 por Renata Negrini | 2025
     </footer>
 
+    <!-- Script JavaScript -->
+    <script src="./assets/js/script.js"></script> 
+
 </body>
+
+</html>
