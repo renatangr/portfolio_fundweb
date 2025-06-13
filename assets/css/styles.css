@@ -251,13 +251,54 @@ h4{
 
 /* Sobre */
 
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). 
+    This will make the text easier to read */
+    background-image: url(../img/bubbles.jpg);
+
+    /* Set a specific height */
+    width: 100%;
+    margin: -1.25rem auto;
+    padding: 0 1rem;
+    height: 100vh;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-image img {
+    width: 30%;
+    margin: 1rem;
+    border: 5px solid var(--melon);
+    border-radius: 50%;
+}
+
+.hero-image h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.hero-image p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+
 .sobre_container {
     width: 100%;
     margin: -1.25rem auto;
     padding: 0 1rem;
     height: 100vh;
     background-image: url(../img/bubbles.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .sobre_container img {
