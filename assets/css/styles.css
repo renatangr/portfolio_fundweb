@@ -20,6 +20,7 @@
 :root {
     --jasmine: #FFEB97;
     --blue: #69A2D3;
+    --blue-bright: #a3c6e4;
     --melon: #FFA5A4;
     --melon-bright: #ffc6c5;
     --melon-800: #cc8d8c;
@@ -106,17 +107,19 @@ button, a {
 
 /* Header */
 
-.menu_container{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 5rem;
-    background: linear-gradient(141deg, var(--desert-sand) 0%, var(--melon) 40%, var(--blue) 90%);
-    border-bottom: 1px solid var(--desert-sand);
-    filter: opacity(0.9);
-    z-index: 1000;
-	
+.menu_container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(141deg, rgba(253, 249, 189, 0.568), rgba(235, 153, 231, 0.459));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* var(--blue-bright) em rgba */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
 }
+
 /*
 .menu_container a{
     font-weight: 700;
@@ -145,7 +148,7 @@ button, a {
   bottom: 7px;
   width: 0%;
   height: 2px;
-  background-color: var(--desert-sand);
+  background-color: var(--melon-800);
   transition: width 0.3s ease-in-out;
 }
 
@@ -288,6 +291,31 @@ h4{
     text-align: center;
 }
 
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--platinum), transparent);
+  backdrop-filter: blur(1px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to top, var(--platinum), transparent);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  pointer-events: none;
+}
 
 .sobre_container {
     width: 100%;
