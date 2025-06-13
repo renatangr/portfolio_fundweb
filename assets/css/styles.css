@@ -250,11 +250,14 @@ h4{
 }
 
 /* Sobre */
+
 .sobre_container {
-    max-width: 1120px;
+    width: 100%;
     margin: -1.25rem auto;
     padding: 0 1rem;
     height: 100vh;
+    background-image: url(../img/bubbles.jpg);
+    background-size: cover;
 }
 
 .sobre_container img {
@@ -407,6 +410,30 @@ footer {
     transform: scaleX(1);
 }
 
+/* GLASSMORPHISM */
+
+.glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--black-800);
+}
+
+.glass h2 {
+    margin-bottom: 1rem;
+}
+
+.glass p {
+    font-size: 0.95rem;
+}
 
 /* Home - Página Sucess */
 .home_container_sucess {
@@ -437,6 +464,7 @@ footer {
     margin: -1.25rem auto;
     padding: 0 1rem;
     height: 100vh;
+    min-block-size: 100vb;
 }
 
 .sobre_container img {

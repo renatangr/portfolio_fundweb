@@ -16,21 +16,22 @@ async function getApiGithub() {
 
 		// Criando o conteúdo da Seção about
 		let conteudo = `
-    
-            <!-- Imagem da seção Sobre -->
-            <img src="${perfil.avatar_url}" alt="Foto do perfil do Github - ${perfil.name}" />
+            <div class="glass">
+                <!-- Imagem da seção Sobre -->
+                <img src="${perfil.avatar_url}" alt="Foto do perfil do Github - ${perfil.name}" />
 
-            <!-- Texto da seção Sobre -->
-            <article id="about_texto" style="text-align: center">
-                <h2 class="highlight">Sobre mim</h2>
-                <p>${perfil.bio}</p>
+                <!-- Texto da seção Sobre -->
+                <article id="about_texto" style="text-align: center">
+                    <h2 class="highlight">Sobre mim</h2>
+                    <p>${perfil.bio}</p>
 
-                <div id="about_github" class="flex sobre_github">
-                    <a href="${perfil.html_url}" target="_blank" class="hover-underline">Github</a>
-                    <p>${perfil.followers} seguidores</p>
-                    <p>${perfil.public_repos} repositórios</p>
-                </div>
-            </article>
+                    <div id="about_github" class="flex sobre_github">
+                        <a href="${perfil.html_url}" target="_blank" class="hover-underline">Github</a>
+                        <p>${perfil.followers} seguidores</p>
+                        <p>${perfil.public_repos} repositórios</p>
+                    </div>
+                </article>
+            </div>
             
     `
 		// Adicionar o conteúdo na página index.html, na Seção about
