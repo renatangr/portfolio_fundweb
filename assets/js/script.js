@@ -21,12 +21,12 @@ async function getApiGithub() {
             <img src="${perfil.avatar_url}" alt="Foto do perfil do Github - ${perfil.name}" />
 
             <!-- Texto da seção Sobre -->
-            <article id="about_texto">
-                <h1>Sobre mim</h1>
+            <article id="about_texto" style="text-align: center">
+                <h2 class="highlight">Sobre mim</h2>
                 <p>${perfil.bio}</p>
 
                 <div id="about_github" class="flex sobre_github">
-                    <a href="${perfil.html_url}" target="_blank" class="botao">Github</a>
+                    <a href="${perfil.html_url}" target="_blank" class="hover-underline">Github</a>
                     <p>${perfil.followers} seguidores</p>
                     <p>${perfil.public_repos} repositórios</p>
                 </div>

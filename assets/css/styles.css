@@ -10,14 +10,24 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::selection {
+  background-color: #ffa5a47e; /* cor do marca-texto */
+  color: #000;               /* cor do texto selecionado */
+}
+
 /* VARIÁVEIS DE CORES */
 
 :root {
-    --purple-200: #9a7bd1;
-    --purple-500: #6b36c8;
-    --purple-800: #441f88;
-    --gray-200: #cccccc;
-    --gray-400: #505861;
+    --jasmine: #FFEB97;
+    --blue: #69A2D3;
+    --melon: #FFA5A4;
+    --melon-bright: #ffc6c5;
+    --melon-800: #cc8d8c;
+    --desert-sand: #E8CFB9;
+    --desert-sand-800: #e6b182;
+    --orange: #d88b47;
+    --platinum: #E1E1E1;
+    --silver: #A8A8A8;
     --black-800: #171717;
     --white: #F9F9F9;
 }
@@ -29,7 +39,7 @@ html {
 }
 
 body {
-    background-color: var(--gray-200);
+    background-color: var(--platinum);
     color: var(--black-800);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39,20 +49,53 @@ button, a {
     cursor: pointer;
 }
 
-.botao {
+/*.botao {
     padding: 0.5rem 2rem;
-    border: 1px solid var(--purple-800);
+    border: 1px solid var(--desert-sand-800);
     border-radius: 0.75rem;
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
-    color: var(--purple-800);
-    background-color: none;
+    color: var(--black-800);
+    background-color: var(--desert-sand-800);
+    transition: all ease-in 0.2s;
 }
 
 .botao:hover {
-    color: var(--white);
-    background-color: var(--purple-800);
+    color: var(--black-800);
+    background-color: var(--orange);
+}*/
+
+.hover-underline {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black-800);
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--melon-800), var(--blue));
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
 }
 
 .flex {
@@ -68,19 +111,47 @@ button, a {
     top: 0;
     width: 100%;
     height: 5rem;
-    background-color: var(--purple-800);
-    border-bottom: 1px solid var(--purple-500);
+    background: linear-gradient(141deg, var(--desert-sand) 0%, var(--melon) 40%, var(--blue) 90%);
+    border-bottom: 1px solid var(--desert-sand);
     filter: opacity(0.9);
     z-index: 1000;
+	
 }
-
+/*
 .menu_container a{
     font-weight: 700;
-    color: var(--white);
+    color: var(--black-800);
+    transition: all ease-in-out 0.2s;
 }
 
 .menu_container a:hover{
-    color: var(--purple-200);
+    border: 1px solid var(--desert-sand);
+    border-radius: 40%;
+}
+*/
+
+.menu_container a {
+  position: relative;
+  color: var(--black-800);
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+}
+
+/* Criando a linha com ::after */
+.menu_container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--desert-sand);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Faz a linha aparecer no hover */
+.menu_container a:hover::after {
+  width: 100%;
 }
 
 .menu_content{
@@ -154,16 +225,28 @@ h4{
 }
 
 .home_container .botao{
-    width: 40%;
+    width: 50%;
+    transition: all ease-in 0.2s;
+    background-color: var(--desert-sand-800);
+    color: var(--black-800);
+    border: #171717;
+}
+
+.home_container .botao:hover{
+    background-color: var(--desert-sand-800);
+    color: var(--black-800);
 }
 
 .home_content{
     flex-direction: column;
     width: 50vw;
+    gap: 10px;
 }
 
 .home_content img{
     width: 75%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 
 /* Sobre */
@@ -177,7 +260,7 @@ h4{
 .sobre_container img {
     width: 30%;
     margin: 1rem;
-    border: 5px solid var(--purple-500);
+    border: 5px solid var(--melon);
     border-radius: 50%;
 }
 
@@ -238,6 +321,7 @@ h4{
 .social_icon{
     width: 4.75rem;
     height: 4.75rem;
+    transition: all ease-in 0.3s;
 }
 
 .social_icon:hover{
@@ -294,8 +378,33 @@ footer {
     font-weight: bold;
     text-align: center;
     color: var(--white);
-    background-color: var(--purple-500);
+    background-color: var(--blue);
     filter: opacity(0.9);
+}
+
+/* Efeito marca-texto ao passar o mouse */
+.highlight {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 100%;
+    height: 0.5em;
+    background-color: var(--jasmine);
+    z-index: -1;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.highlight:hover::after {
+    transform: scaleX(1);
 }
 
 
@@ -376,22 +485,30 @@ footer {
     }
 
     .home_container{
-        flex-direction: column-reverse;
-        gap: 0;
+        flex-direction: column;
+        gap: 20px;
         height: auto;
-        margin-top: 0;
-        padding: 1rem;
+        margin-top: 0px;
+        padding: 3rem;
     }
 
     .home_content{
         width: 100%;
         margin: 0;
+        gap: 10px;
     }
 
     .home_content .botao{
         width: 60%;
         margin-top: 1rem;
     }
+
+    .home_content img{
+        width: 50%;
+        margin-left: 10vw;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }   
 
     .sobre_container{
         flex-direction: column;
@@ -401,7 +518,7 @@ footer {
     }
 
     .sobre_container img{
-        width: 50%;
+        width: 40%;
         margin-bottom: 1rem;
     }
 
