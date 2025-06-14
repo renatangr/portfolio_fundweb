@@ -50,23 +50,6 @@ button, a {
     cursor: pointer;
 }
 
-/*.botao {
-    padding: 0.5rem 2rem;
-    border: 1px solid var(--desert-sand-800);
-    border-radius: 0.75rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--black-800);
-    background-color: var(--desert-sand-800);
-    transition: all ease-in 0.2s;
-}
-
-.botao:hover {
-    color: var(--black-800);
-    background-color: var(--orange);
-}*/
-
 .hover-underline {
   font-size: 1rem;
   font-weight: 700;
@@ -120,19 +103,6 @@ button, a {
   z-index: 1000;
 }
 
-/*
-.menu_container a{
-    font-weight: 700;
-    color: var(--black-800);
-    transition: all ease-in-out 0.2s;
-}
-
-.menu_container a:hover{
-    border: 1px solid var(--desert-sand);
-    border-radius: 40%;
-}
-*/
-
 .menu_container a {
   position: relative;
   color: var(--black-800);
@@ -184,7 +154,7 @@ button, a {
     padding: 0.5rem;
 }
 
-#menu_content_sucess {
+#menu_content_success {
     width: 100%;
     max-width: 1120px;
     padding: 0 1.5rem;
@@ -193,7 +163,7 @@ button, a {
     align-items: center;
 }
 
-#menu_content_sucess a {
+#menu_content_success a {
     font-size: 1rem;
     font-weight: 700;
 }
@@ -504,25 +474,25 @@ footer {
     font-size: 0.95rem;
 }
 
-/* Home - Página Sucess */
-.home_container_sucess {
+/* Home - Página success */
+.home_container_success {
     height: calc(100vh - 12.5rem);
     max-width: 1120px;
     margin: 1rem auto;
     padding: 0 1rem;
 }
 
-#home_sucess {
+#home_success {
     width: 50vw;
     flex-direction: column;
 }
 
-#home_sucess h1 {
+#home_success h1 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-#home_sucess h4 {
+#home_success h4 {
     font-size: 1.25rem;
     padding: 1rem;
 }
@@ -561,6 +531,40 @@ footer {
 
 #sobre_texto {
     margin-left: 2rem;
+}
+
+/* PÁGINA CURRÍCULO */
+.main_cv {
+  max-width: 960px;
+  margin: 1rem auto 2rem auto;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos e conteúdo */
+.main_cv h1, main h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.main_cv h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #4a90e2;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 2rem;
+}
+
+.main_cv p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.main_cv li {
+  margin-bottom: 1rem;
 }
 
 /* Responsividade Mobile */
