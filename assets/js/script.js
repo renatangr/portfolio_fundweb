@@ -23,7 +23,7 @@ async function getApiGithub() {
                 <!-- Texto da seção Sobre -->
                 <article id="about_texto" style="text-align: center">
                     <h2 class="highlight">Sobre mim</h2>
-                    <p>${perfil.bio}</p>
+                    <p>Profissional com 3 anos de experiência em tecnologia, com vivência em produtos e projetos conduzidos de ponta a ponta em times ágeis. Atualmente me aprofundo no desenvolvimento full-stack.</p>
 
                     <div id="about_github" class="flex sobre_github">
                         <a href="${perfil.html_url}" target="_blank" class="hover-underline">Github</a>

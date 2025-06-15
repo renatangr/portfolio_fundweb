@@ -31,6 +31,7 @@
     --silver: #A8A8A8;
     --black-800: #171717;
     --white: #F9F9F9;
+    --purple: #885781;
 }
 
 html {
@@ -108,6 +109,17 @@ button, a {
   color: var(--black-800);
   text-decoration: none;
   transition: all ease-in-out 0.2s;
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw
+}
+
+.icon {
+    width: 2vw; 
+    height: 2vw;
 }
 
 /* Criando a linha com ::after */
@@ -230,7 +242,7 @@ h4{
     margin: -1.25rem auto;
     padding: 0 1rem;
     height: 100vh;
-     background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -238,7 +250,7 @@ h4{
 
 .hero-image img {
     width: 30%;
-    margin: 1rem;
+    margin-right: 5rem;
     border: 5px solid var(--melon);
     border-radius: 50%;
 }
@@ -281,44 +293,6 @@ h4{
   pointer-events: none;
 }
 
-.sobre_container {
-    width: 100%;
-    margin: -1.25rem auto;
-    padding: 0 1rem;
-    height: 100vh;
-    background-image: url(../img/bubbles.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.sobre_container img {
-    width: 30%;
-    margin: 1rem;
-    border: 5px solid var(--melon);
-    border-radius: 50%;
-}
-
-.sobre_container h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 3rem;
-    text-align: center;
-}
-
-.sobre_container p {
-    margin: 1rem 0;
-    text-align: center;
-}
-
-.sobre_github {
-    justify-content: space-evenly;
-}
-
-#sobre_texto {
-    margin-left: 2rem;
-}
 
 /* Contato */
 
@@ -534,7 +508,7 @@ footer {
     line-height: 1.6;
     margin: 0;
     padding: 40px 20px;
-    color: #333;
+    color: var(--black-800);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -544,6 +518,12 @@ footer {
     background-image: url(../img/bubbles.jpg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
 }
 
 .block-container {
@@ -616,7 +596,7 @@ footer {
 
 .main_cv ul li i {
     margin-right: 13px;
-    color: var(--orange);
+    color: #000000b6;
     font-size: 1.1em;
     flex-shrink: 0; /* Evita que o ícone encolha */
     padding-top: 5px; /* Pequeno ajuste visual para alinhar com o texto */
@@ -631,7 +611,7 @@ footer {
 
 .contact-info p i {
     margin-right: 13px;
-    color: var(--orange);
+    color: #000000b6;
     font-size: 1.1em;
     flex-shrink: 0;
     padding-top: 5px;
@@ -660,13 +640,14 @@ footer {
 .experience-item h3, .education-item h3 {
     margin-bottom: 5px;
     border-bottom: none;
-    color: var(--orange);
+    color: #000000b6;
 }
 
 .experience-item p, .education-item p {
     margin: 0;
-    color: #555;
+    color: var(--black-800);
     font-size: 0.95em;
+    font-weight: bold;
 }
 
 .experience-item ul {
@@ -678,7 +659,7 @@ footer {
 .experience-item ul li, .education-item ul li, .summary p {
     margin-bottom: 5px;
     padding-top: 10px;
-    color: #444;
+    color: var(--black-800);
     padding-left: 0px;
     position: relative;
     font-size: 0.97em;
@@ -709,7 +690,7 @@ footer {
     padding: 8px 15px;
     border-radius: 15px;
     font-size: 0.9em;
-    color: #555;
+    color: var(--black-800);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
 }
@@ -718,7 +699,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Responsividade Mobile */
+/* Responsividade para tablets e laptops menores */
 
 @media screen and (max-width: 960px){
     body{
@@ -730,6 +711,20 @@ footer {
     main{
         flex: 1;
         flex-direction: column;
+    }
+
+    .menu_content a {
+        font-size: 15px;
+    }
+
+    #titulo p {
+        display: none; /* Esconde o parágrafo com o texto */
+    }
+
+
+    .icon {
+        width: 7vw; 
+        height: 7vw;
     }
 
     footer{
@@ -792,5 +787,149 @@ footer {
     form{
         margin: 1.5rem 0 0 0;
         padding: 1rem;
+    }
+
+    /* PÁGINA CURRÍCULO */
+
+    .main_cv {
+        padding: 30px 15px; /* Ajusta o padding do corpo em telas menores */
+        align-items: flex-start; /* Alinha o conteúdo ao topo para evitar muito espaço em branco */
+    }
+
+    .block-container {
+        flex-direction: column; /* Empilha os blocos verticalmente */
+        gap: 20px; /* Reduz o espaçamento entre os blocos empilhados */
+        max-width: 600px; /* Define uma largura máxima para o container em mobile, se desejar */
+    }
+
+    .cv-block {
+        flex: none; /* Remove a proporção de flexibilidade que faz a coluna ser mais larga */
+        width: 100%; /* Faz com que cada bloco ocupe a largura total disponível */
+        min-width: unset; /* Remove a largura mínima definida para desktop */
+        max-width: unset; /* Remove a largura máxima definida para desktop */
+        padding: 30px; /* Reduz um pouco o padding interno dos blocos */
+    }
+
+    .experience-item ul {
+        padding-left: 20px; /* Pode reduzir um pouco o recuo para economizar espaço */
+    }
+    .skills li {
+        padding: 6px 12px; /* Ajusta o padding das skills */
+        font-size: 0.85em; /* Diminui um pouco o texto das skills */
+    }
+}
+
+/* Responsividade para celulares */
+
+@media (max-width: 480px) {
+
+    .highlight::after {
+        bottom: 0.5em;
+    }
+
+    .menu_content a {
+        font-size: 15px; /* Reduz o tamanho da fonte do menu */
+    }
+
+    .icon {
+        width: 8vw; /* Pode aumentar um pouco o ícone para ser mais visível */
+        height: 8vw;
+    }
+
+    .home_container {
+        padding: 2rem 1rem; /* Reduz o padding do container da home */
+        gap: 15px; /* Reduz o espaçamento entre itens */
+    }
+
+    .home_content h1 {
+        font-size: 28px;
+    }
+
+    .home_content .botao {
+        width: 80%; /* Botão maior em telas pequenas para facilitar o toque */
+        font-size: 0.9em; /* Ajusta o tamanho da fonte do botão, se necessário */
+    }
+
+    .home_content img {
+        width: 70%; /* Imagem da home um pouco maior em mobile */
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        height: 700px;
+    }
+
+    .hero-image img {
+        margin-left: 4.5rem;
+        width: 60%;
+    }
+
+    .hero-image h2 {
+        font-size: 1.5rem;
+    }
+
+    .glass {
+        width: 100%;
+        display: block;
+        justify-items: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .glass p {
+        font-size: 1rem;
+    }
+
+    .glass a {
+        font-size: 1rem;
+    }
+
+    .contato_container {
+        padding: 0 0.8rem; /* Ajusta padding do contato */
+    }
+
+    form {
+        margin: 1rem 0; /* Ajusta a margem do formulário */
+        padding: 0.8rem; /* Reduz o padding do formulário */
+    }
+
+    /* --- Ajustes para a PÁGINA CURRÍCULO em telas ultra-pequenas --- */
+    .main_cv {
+        padding: 20px 10px; /* Reduz ainda mais o padding do main do currículo */
+    }
+
+    .block-container {
+        gap: 15px; /* Reduz o espaçamento entre os blocos do currículo */
+        max-width: 100%; /* Garante que o container ocupe a largura total */
+    }
+
+    .cv-block {
+        padding: 20px; /* Reduz o padding interno dos blocos do currículo */
+    }
+
+    h1 {
+        font-size: 1.6em; /* Título principal menor */
+    }
+    h2 {
+        font-size: 1.3em; /* Títulos de seção menores */
+    }
+    h3 {
+        font-size: 1.1em; /* Títulos de subseção menores */
+    }
+    ul li,
+    .contact-info p,
+    .experience-item p,
+    .education-item p,
+    .summary p {
+        font-size: 0.9em; /* Diminui o tamanho da fonte do texto geral */
+    }
+
+    .experience-item ul {
+        padding-left: 15px; /* Reduz o recuo das listas */
+    }
+    .skills li {
+        padding: 5px 10px; /* Reduz o padding das skills */
+        font-size: 0.8em; /* Diminui o texto das skills */
     }
 }
