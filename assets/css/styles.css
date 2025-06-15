@@ -672,14 +672,16 @@ footer {
 .experience-item ul {
     padding-left: 30px;
     width: 95%;
-    margin-top: 10px; /* Espaçamento da lista de responsabilidades */
+    margin-top: 10px;
 }
 
-.experience-item ul li, .summary p {
+.experience-item ul li, .education-item ul li, .summary p {
     margin-bottom: 5px;
+    padding-top: 10px;
     color: #444;
-    padding-left: 5px;
+    padding-left: 0px;
     position: relative;
+    font-size: 0.97em;
 }
 
 
@@ -690,7 +692,8 @@ footer {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-    position: absolute; /* Para alinhar melhor a bolinha */
+    padding-right: 5px;
+    position: static; /* Para alinhar melhor a bolinha */
     left: 0;
     top: 0;
 }
