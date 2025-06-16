@@ -21,7 +21,7 @@ async function getApiGithub() {
                 <img src="${perfil.avatar_url}" alt="Foto do perfil do Github - ${perfil.name}" />
 
                 <!-- Texto da seção Sobre -->
-                <article id="about_texto" style="text-align: center">
+                <article id="about_texto">
                     <h2 class="highlight">Sobre mim</h2>
                     <p>Profissional com 3 anos de experiência em tecnologia, com vivência em produtos e projetos conduzidos de ponta a ponta em times ágeis. Atualmente me aprofundo no desenvolvimento full-stack.</p>
 
